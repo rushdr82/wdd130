@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #DAD7CD   ;
-    --secondary-color: #A3B18A ;
+    --primary-color: #DAD7CD;
+    --secondary-color: #A3B18A;
     --accent1-color: #588157;
     --accent2-color: #3A5A40;
     --heading-font: "Trebuchet MS";
@@ -71,7 +71,7 @@ nav a {
     text-align: center;
     text-decoration: none;
     padding: 35px;
-    color:var(--headline-color-on-color)
+    color:var(--headline-color-on-color);
 }
 
 nav a:hover {
