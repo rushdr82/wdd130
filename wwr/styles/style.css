@@ -35,14 +35,16 @@ footer {
 
 footer a {
     text-decoration: none;
+    color: var(--paragraph-color-on-color);
 }
 
 footer a:hover {
-    background-color:var(--nav-hover-background-color);
+    background-color:var(--accent2-color);
 }
 
 footer p {
     font-size: 1.2em;
+    color: var(--paragraph-color-on-color);
 }
 
 footer p a:hover {
@@ -52,15 +54,20 @@ footer p a:hover {
 header {
     display: grid;
     grid-template-columns: 150px auto;
+    background-color: transparent;
+}
+
+header2 {
+    display: grid;
+    grid-template-columns: 150px auto;
+    background-color: var(--secondary-color);
 }
 
 h2 {
     margin: 0;
 }
 
-img {
-
-}
+img {}
 
 nav {
     display: flex;
@@ -76,6 +83,23 @@ nav a {
 
 nav a:hover {
     background-color: var(--nav-background-color);
+}
+
+nav2 /*Page2 Rivers*/ {
+    display: flex;
+    justify-content: space-around;
+    background-color:var(--secondary-color);
+}
+
+nav2 a /*Page2 Rivers*/ {
+    text-align: center;
+    text-decoration: none;
+    padding: 35px;
+    color:var(--headline-color-on-color);
+}
+
+nav2 a:hover /*Page2 Rivers*/ {
+    background-color: var(--accent2-color);
 }
 
 main {
@@ -95,6 +119,33 @@ section {
     background-color: var(--nav-background-color);
     grid-column: 1/11;
     grid-row: 4/9;
+}
+
+#background-rivers {
+    height: 800px;
+    background-color: var(--nav-background-color);
+    grid-column: 1/11;
+    grid-row: 2/3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#background-rivers-2 {
+    height: 800px;
+    background-color: var(--nav-background-color);
+    grid-column: 1/11;
+    grid-row: 3/4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#background-rivers-3 {
+    height: 800px;
+    background-color: var(--nav-background-color);
+    grid-column: 1/11;
+    grid-row: 5/6;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #content {
@@ -230,10 +281,85 @@ section {
     padding-bottom: 15px;
 }
 
+.msg-rivers {
+    background-color: var(--paragraph-background-color);
+    line-height: 1.5em;
+    padding: 35px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    grid-column: 6/10;
+    grid-row: 2/3;
+    box-shadow: 5px 5px 10px #6f7364;
+    align-self: center;
+}
+
+.msg-rivers p {
+    font-size: .7em;
+    padding-bottom: 10px;
+}
+
+.msg-rivers2 {
+    background-color: var(--paragraph-background-color);
+    line-height: 1.5em;
+    padding: 35px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    grid-column: 6/10;
+    grid-row: 3/4;
+    box-shadow: 5px 5px 10px #6f7364;
+    align-self: center;
+}
+
+.msg-rivers2 p {
+    font-size: .7em;
+    padding-bottom: 10px;
+}
+
+.msg-rivers3 {
+    background-color: var(--paragraph-background-color);
+    line-height: 1.5em;
+    padding: 35px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    grid-column: 6/10;
+    grid-row: 5/6;
+    box-shadow: 5px 5px 10px #6f7364;
+    align-self: center;
+}
+
+.msg-rivers3 p {
+    font-size: .7em;
+    padding-bottom: 10px;
+}
+
 .rapids-card {
     margin: 200px 0;
     grid-column: 8/10;
     grid-row: 2/3;
+}
+
+.rivers {
+    width: 80%;
+    grid-column: 2/6;
+    grid-row: 2/3;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin-top: 30%;
+}
+
+.rivers2 {
+    width: 80%;
+    grid-column: 2/6;
+    grid-row: 3/4;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin-top: 30%;
+}
+
+.rivers3 {
+    width: 80%;
+    grid-column: 2/6;
+    grid-row: 5/6;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin-top: 30%;
 }
 
 .rivers-card {
@@ -242,20 +368,34 @@ section {
     grid-row: 2/3;
 }
 
+.rivers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.rivers-heading {
+    color: var(--headline-color-on-white);
+    font-size: 2em;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    grid-column: 5/6;
+    grid-row: 1/2;
+}
+
 .social {
     padding-top: 15px;
 }
 
 
 @media screen and (max-width: 900px) {
-    #hero, .home-grid {
+    #hero, .home-grid, .rivers-grid {
         display: block;
         height: auto;
     }
-    nav, footer {
+    nav, nav2, footer {
         flex-direction: column;
     }
-    nav a {
+    nav a, nav2 a {
         display: block;
         padding: 15px;
     }
@@ -276,10 +416,10 @@ section {
         margin: 50px auto;
         width: 60%;
     }
-    #background {
+    #background, #background-rivers, #background-rivers-2, #background-rivers-3 {
         display: none;
     }
-    .mountains, .msg {
+    .mountains, .msg, .rivers, .rivers2, .rivers3, .msg-rivers, .msg-rivers2, .msg-rivers3 {
         width: 80%;
         display: block;
         margin: 0 auto;
