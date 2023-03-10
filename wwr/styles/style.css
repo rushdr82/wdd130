@@ -387,7 +387,6 @@ section {
     padding-top: 15px;
 }
 
-
 @media screen and (max-width: 900px) {
     #hero, .home-grid, .rivers-grid {
         display: block;
